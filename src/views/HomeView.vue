@@ -3,6 +3,7 @@
     <Banner/>
     <Sobre/>
     <Tecnologias/>
+    <Projetos/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Banner from '@/components/Banner.vue'
 import Sobre from '@/components/Sobre.vue'
 import Tecnologias from '@/components/Tecnologias.vue'
+import Projetos from '@/components/Projetos.vue'
 
 export default {
   name: 'HomeView',
   components: {
     Banner,
     Sobre,
-    Tecnologias
+    Tecnologias,
+    Projetos
   }
 }
 </script>
