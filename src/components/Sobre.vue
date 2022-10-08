@@ -40,7 +40,7 @@
 <style lang="scss">
     .sobre{
         padding: 80px 100px;
-        background-color: #1f2234;
+        background-color: $fundo-01;
 
         .grid{
             display: grid;
@@ -70,7 +70,7 @@
                     margin-bottom: 20px;
                     font-weight: bold;
                     font-size: 30px;
-                    color: #f05a59;
+                    color: $titulo;
                 }
                 > p{
                     font-size: 18px;

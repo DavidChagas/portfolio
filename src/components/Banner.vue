@@ -57,7 +57,7 @@ export default {
         .nome{
             font-weight: bold;
             font-size: 30px;
-            color: #f05a59;
+            color: $titulo;
         }
         .descricao{
             font-size: 14px;
