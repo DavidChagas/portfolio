@@ -40,16 +40,17 @@ export default {
         text-align: center;
 
         .foto{
-            width: 200px;
-            height: 200px ;
+            width: 250px;
+            height: 250px ;
 
             margin: 0 auto 20px auto;
 
             border: 2px solid white;
             border-radius: 50%;
 
-            background-image: url('../assets/myself.jpg');
+            background-image: url('../assets/eu-colorido-sem-fundo.png');
             background-size: cover;
+                background-color: #e1e1e1;
 
             z-index: 9999;
         }
