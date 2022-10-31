@@ -1,6 +1,6 @@
 <template>
     <div class="banner">
-        <img class="img-fluid" alt="Banner" src="../assets/banner.jpg">
+        <img class="img-fluid d-none d-lg-block" alt="Banner" src="../assets/banner.jpg">
         <div class="lamina"></div>
         <div class="eu">
         <div class="foto"></div>
@@ -20,6 +20,13 @@ export default {
 .banner{
     position: relative;
 
+    @media(max-width: 991px){
+        height: 350px;
+        background-image: url('../assets/banner.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
     .lamina{
         position: absolute;
         top: 0;
@@ -31,7 +38,7 @@ export default {
     }
     .eu{
         position: absolute;
-        top: 20%;
+        top: 10%;
         left: calc(50% - 150px);
 
         width: 300px;
@@ -39,9 +46,13 @@ export default {
 
         text-align: center;
 
+        @media(min-width: 992px){
+            top: 20%;
+        }
+
         .foto{
-            width: 250px;
-            height: 250px ;
+            width: 150px;
+            height: 150px;
 
             margin: 0 auto 20px auto;
 
@@ -50,9 +61,15 @@ export default {
 
             background-image: url('../assets/eu-colorido-sem-fundo.png');
             background-size: cover;
-                background-color: #e1e1e1;
+            background-color: #e1e1e1;
 
             z-index: 9999;
+
+            @media(min-width: 1300px){
+                width: 250px;
+                height: 250px;
+            }
+            
         }
 
         .nome{

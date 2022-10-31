@@ -1,18 +1,20 @@
 <template>
     <div class="tecnologias">
-        <div class="titulo">Tecnologias</div>
-        <div class="descricao">Algumas tecnologias que já tive contato.</div>
+        <div class="container">
+            <div class="titulo">Tecnologias</div>
+            <div class="descricao">Algumas tecnologias que já tive contato.</div>
 
-        <div class="grid-tecnologias">
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">HTML</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">CSS</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85">JS</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">AngularJS</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">Mysql</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75">PHP</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Laravel</div>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Vue.js</div>
-            <!-- <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Github</div> -->
+            <div class="grid-tecnologias">
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">HTML</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">CSS</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85">JS</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">AngularJS</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">Mysql</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75">PHP</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Laravel</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Vue.js</div>
+                <!-- <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Github</div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -25,26 +27,37 @@
 
 <style lang="scss">
     .tecnologias{
-        padding: 80px 100px;
+        padding: 50px 20px;
 
         background-color: $fundo-02;
 
-        > .titulo{
+        @media(min-width: 768px){
+            padding: 80px 100px;
+        }
+
+        .titulo{
             margin-bottom: 10px;
             font-weight: bold;
             font-size: 30px;
             color: $titulo;
         }
 
-        > .descricao{
+        .descricao{
             margin-bottom: 50px;
             color: white;
         }
 
         .grid-tecnologias{
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             column-gap: 10px;
+
+            @media(min-width: 768px){
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media(min-width: 1200px){
+                grid-template-columns: repeat(8, 1fr);
+            }
 
             div[role="progressbar"] {
                 --size: 100px;
@@ -63,6 +76,7 @@
                 font-family: Helvetica, Arial, sans-serif;
                 font-size: 15px;
                 color: white;
+                margin: 20px auto;
             }
         }
     }
