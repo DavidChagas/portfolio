@@ -10,21 +10,43 @@
                         <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-1.png"><!-- cor da imagem #6E7287 -->
                     </div>
                     <div class="nome">Gerenciador de Finanças Pessoais</div>
-                    <div class="descricao">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...</div>
+                    <div class="descricao">
+                        Sistema que auxilia na organização financeira pessoal, permitindo o gerenciamento de receitas, despesas, objetivos e etc.
+                        <br><br>
+                        <i>Sistema desenvolvido como projeto final do curso de Análise e Desenvolvimento de Sistemas.</i>
+                        <br><br>
+                        <div class="tecs">
+                            <b>Tecnologias:</b> 
+                            <div class="tecs-label">
+                                <div class="label-tec">Vue.js</div> <div class="label-tec">Laravel</div> <div class="label-tec">My SQL</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="projeto">
                     <div class="icone">
-                        <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-1.png"><!-- cor da imagem #6E7287 -->
+                        <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-2.png"><!-- cor da imagem #6E7287 -->
                     </div>
-                    <div class="nome">Gerenciador de Finanças Pessoais</div>
-                    <div class="descricao">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...</div>
+                    <div class="nome">Controle de Séries</div>
+                    <div class="descricao">
+                        Sistema que permite o cadastro de series e seus episódios, podendo fazer o gerenciamento dos episódios já assistidos. 
+                        <br><br>
+                        <i>Projeto desenvolvido durante o curso de Laravel pela Alura .</i>
+                        <br><br>
+                        <div class="tecs">
+                            <b>Tecnologias:</b> 
+                            <div class="tecs-label">
+                                <div class="label-tec">Blade</div> <div class="label-tec">Laravel</div> <div class="label-tec">My SQL</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="projeto">
+                <div class="projeto dev">
                     <div class="icone">
-                        <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-1.png"><!-- cor da imagem #6E7287 -->
+                        <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-3.png"><!-- cor da imagem #6E7287 -->
                     </div>
-                    <div class="nome">Gerenciador de Finanças Pessoais</div>
-                    <div class="descricao">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...</div>
+                    <div class="nome">Em desenvolvimento</div>
+                    <div class="descricao">Projetos legais estão por vir.</div>
                 </div>
             </div>
         </div> 
@@ -58,11 +80,36 @@
     .descricao{
         margin-bottom: 50px;
         color: white;
-    }
+        font-size: 15px;
 
-    .descricao{
-        margin-bottom: 50px;
-        color: white;
+        i{
+            color: rgb(140, 140, 140);
+        }
+
+        .tecs{
+            display: flex;
+
+            .tecs-label{
+                display: flex;
+                flex-wrap: wrap;
+
+                .label-tec{
+                    
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                    padding: 2px 10px;
+
+                    border-radius: 20px;
+                    font-size: 12px;
+
+                    background-color: #e1e1e1;
+                    color: $fundo-02;
+                    font-weight: bold;
+                }
+            }
+            
+            
+        }
     }
 
     .grid-projetos{
@@ -81,6 +128,18 @@
             padding: 40px 20px;
 
             border: 1px solid #6E7287;
+
+            transition: all .3s;
+
+            &.dev{
+                &:hover{
+                    box-shadow: none;
+                }
+            }
+
+            &:hover{
+                box-shadow: 0px 0px 10px #878787;
+            }
 
             .icone{
                 text-align: center;
