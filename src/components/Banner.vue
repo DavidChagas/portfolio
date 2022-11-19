@@ -1,30 +1,51 @@
 <template>
     <div class="banner">
-        <img class="img-fluid d-none d-lg-block" alt="Banner" src="../assets/banner.jpg">
+        <!-- <img class="img-fluid d-none d-lg-block" alt="Banner" src="../assets/banner.jpg"> -->
         <div class="lamina"></div>
         <div class="eu">
-        <div class="foto"></div>
-        <div class="nome">David Chagas</div>
-        <div class="descricao">Desenvolvedor Web</div>
+            <!-- <div class="foto"></div> -->
+            <div class="nome">David Chagas</div>
+            <div class="descricao-banner">Desenvolvedor Web Full Stack</div>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Banner'
+    methods: {
+        typeWrite(elemento){
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = ' ';
+            textoArray.forEach(function(letra, i){   
+            
+            setTimeout(function(){
+                elemento.innerHTML += letra;
+            }, 75 * i)
+
+          });
+        }
+    },
+
+    mounted() {
+        const titulo = document.querySelector('.descricao-banner');
+        console.log(titulo)
+        this.typeWrite(titulo);
+    }
 }
 </script>
 
 <style lang="scss">
 .banner{
     position: relative;
+    height: 350px;
+
+    background-image: url('../assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
 
     @media(max-width: 991px){
-        height: 350px;
-        background-image: url('../assets/banner.jpg');
-        background-size: cover;
-        background-position: center;
+        height: 250px;
     }
 
     .lamina{
@@ -38,7 +59,7 @@ export default {
     }
     .eu{
         position: absolute;
-        top: 10%;
+        top: 30%;
         left: calc(50% - 150px);
 
         width: 300px;
@@ -47,7 +68,7 @@ export default {
         text-align: center;
 
         @media(min-width: 992px){
-            top: 20%;
+            top: 30%;
         }
 
         .foto{
@@ -77,7 +98,7 @@ export default {
             font-size: 30px;
             color: $titulo;
         }
-        .descricao{
+        .descricao-banner{
             font-size: 14px;
             color: rgba(255, 255, 255, 0.755);
         }
