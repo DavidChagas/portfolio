@@ -10,7 +10,7 @@
                         <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-1.png"><!-- cor da imagem #6E7287 -->
                     </div>
                     <div class="nome">Gerenciador de Finanças Pessoais</div>
-                    <div class="descricao">
+                    <div class="descricao-projeto">
                         Sistema que auxilia na organização financeira pessoal, permitindo o gerenciamento de receitas, despesas, objetivos e etc.
                         <br><br>
                         <i>Sistema desenvolvido como projeto final do curso de Análise e Desenvolvimento de Sistemas.</i>
@@ -22,13 +22,14 @@
                             </div>
                         </div>
                     </div>
+                    <a class="link-github" href="https://github.com/DavidChagas/gerenciador-financas-pessoais" target="_blank">Link do projeto no github.</a>
                 </div>
                 <div class="projeto">
                     <div class="icone">
                         <img class="img-fluid" alt="Banner" src="../assets/icone-projeto-2.png"><!-- cor da imagem #6E7287 -->
                     </div>
                     <div class="nome">Controle de Séries</div>
-                    <div class="descricao">
+                    <div class="descricao-projeto">
                         Sistema que permite o cadastro de series e seus episódios, podendo fazer o gerenciamento dos episódios já assistidos. 
                         <br><br>
                         <i>Projeto desenvolvido durante o curso de Laravel pela Alura .</i>
@@ -40,6 +41,7 @@
                             </div>
                         </div>
                     </div>
+                    <a class="link-github" href="https://github.com/DavidChagas/controle-series" target="_blank">Link do projeto no github.</a>
                 </div>
                 <div class="projeto dev">
                     <div class="icone">
@@ -81,35 +83,6 @@
         margin-bottom: 50px;
         color: white;
         font-size: 15px;
-
-        i{
-            color: rgb(140, 140, 140);
-        }
-
-        .tecs{
-            display: flex;
-
-            .tecs-label{
-                display: flex;
-                flex-wrap: wrap;
-
-                .label-tec{
-                    
-                    margin-left: 10px;
-                    margin-bottom: 5px;
-                    padding: 2px 10px;
-
-                    border-radius: 20px;
-                    font-size: 12px;
-
-                    background-color: #e1e1e1;
-                    color: $fundo-02;
-                    font-weight: bold;
-                }
-            }
-            
-            
-        }
     }
 
     .grid-projetos{
@@ -125,11 +98,42 @@
         }
 
         .projeto{
-            padding: 40px 20px;
+            position: relative;
+
+            padding: 40px 20px 60px 20px;
 
             border: 1px solid #6E7287;
 
             transition: all .3s;
+
+            .descricao-projeto{
+                i{
+                    color: rgb(140, 140, 140);
+                }
+
+                .tecs{
+                    display: flex;
+
+                    .tecs-label{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .label-tec{
+                            
+                            margin-left: 10px;
+                            margin-bottom: 5px;
+                            padding: 2px 10px;
+
+                            border-radius: 20px;
+                            font-size: 12px;
+
+                            background-color: #e1e1e1;
+                            color: $fundo-02;
+                            font-weight: bold;
+                        }
+                    }  
+                }
+            }
 
             &.dev{
                 &:hover{
@@ -149,6 +153,15 @@
                 text-align: center;
                 font-size: 20px;
                 font-weight: bold;
+            }
+
+            a{
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+
+                color: white;
+                font-size: 13px;
             }
         }
     }

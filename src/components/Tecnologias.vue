@@ -8,11 +8,11 @@
                 <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">HTML</div>
                 <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">CSS</div>
                 <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85">JS</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">AngularJS</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80">Mysql</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75">PHP</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Laravel</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Vue.js</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">AngularJS</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Mysql</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">PHP</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Laravel</div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Vue.js</div>
                 <!-- <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Github</div> -->
             </div>
         </div>

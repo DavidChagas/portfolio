@@ -15,15 +15,15 @@
                             Comecei a trabalhar como programador em 2018, mais especificamente com desenvolvimento de sites e lojas virtuais, me formei em Análise e Desenvolvimento de Sistemas pela Universidade de Passo Fundo em 2021.
                         </p>
                         <div class="contatos">
-                            <div class="contato">
+                            <a href="https://api.whatsapp.com/send?phone=5554996947221" target="_blank" class="contato">
                                 <img src="../assets/whatsapp.png"/>
-                            </div>
-                            <div class="contato">
+                            </a>
+                            <a class="contato" href="https://www.linkedin.com/in/david-chagas-13bb95164/" target="_blank">
                                 <img src="../assets/linkedin.png"/>
-                            </div>
-                            <div class="contato">
+                            </a>
+                            <a class="contato" href="https://github.com/DavidChagas" target="_blank">
                                 <img src="../assets/github.png"/>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
