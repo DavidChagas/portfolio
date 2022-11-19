@@ -4,6 +4,7 @@
     <Sobre/>
     <Tecnologias/>
     <Projetos/>
+    <Cursos/>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Banner from '@/components/Banner.vue'
 import Sobre from '@/components/Sobre.vue'
 import Tecnologias from '@/components/Tecnologias.vue'
 import Projetos from '@/components/Projetos.vue'
+import Cursos from '@/components/Cursos.vue'
 
 export default {
   name: 'HomeView',
@@ -20,7 +22,8 @@ export default {
     Banner,
     Sobre,
     Tecnologias,
-    Projetos
+    Projetos,
+    Cursos
   }
 }
 </script>
