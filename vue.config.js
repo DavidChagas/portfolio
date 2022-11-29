@@ -7,6 +7,5 @@ module.exports = defineConfig({
         additionalData: `@import "~@/variables.scss";`
       },
     }
-  },
-  publicPath: 'portfolio'
+  }
 })
