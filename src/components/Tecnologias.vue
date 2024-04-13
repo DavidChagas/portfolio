@@ -2,26 +2,57 @@
     <div class="tecnologias">
         <div class="container">
             <div class="titulo">Tecnologias</div>
-            <div class="descricao">Algumas tecnologias que já tive contato.</div>
+            <div class="descricao">Algumas tecnologias que já trabalhei.</div>
 
             <div class="grid-tecnologias">
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">HTML</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">CSS</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85">JS</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">AngularJS</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Mysql</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">PHP</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Laravel</div>
-                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Vue.js</div>
-                <!-- <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Github</div> -->
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">HTML <small>{{experienciaHtml}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90">CSS <small>{{experienciaCss}} anos</small> </div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85">JS <small>{{experienciaJs}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">AngularJS <small>{{experienciaAngularJs}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">Mysql <small>{{experienciaMysql}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70">PHP <small>{{experienciaPhp}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Laravel <small>{{experienciaLaravel}} anos</small></div>
+                <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:40">Vue.js <small>{{experienciaVueJs}} anos</small></div>
             </div>
         </div>
     </div>
 </template>
 
+
 <script>
+import moment from 'moment';
+
    export default {
-        name: 'Tecnologias'
+    name: 'Tecnologias',
+        data() {
+            return {
+                experienciaHtml: 0,
+                experienciaCss: 0,
+                experienciaJs: 0,
+                experienciaAngularJs: 0,
+                experienciaMysql: 0,
+                experienciaPhp: 0,
+                experienciaLaravel: 0,
+                experienciaVueJs: 0
+            }
+        },
+        methods: {
+            calculaExperiencia() {
+                this.experienciaHtml = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaCss = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaJs = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaAngularJs = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaMysql = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaPhp = moment().diff(moment("20180101", "YYYYMMDD"), 'years');
+                this.experienciaLaravel = moment().diff(moment("20200101", "YYYYMMDD"), 'years');
+                this.experienciaVueJs = moment().diff(moment("20200101", "YYYYMMDD"), 'years');
+
+                console.log(this.experienciaHtml);  
+            }
+        },
+        mounted() {
+            this.calculaExperiencia();
+        }
     }
 </script>
 
@@ -67,7 +98,11 @@
                 width: var(--size);
                 height: var(--size);
                 border-radius: 50%;
-                display: grid;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
                 place-items: center;
                 background: 
                     radial-gradient(closest-side, $fundo-01 80%, transparent 0 110%, white 0),
@@ -77,6 +112,10 @@
                 font-size: 15px;
                 color: white;
                 margin: 20px auto;
+
+                >small{
+                    font-size: 12px;
+                }
             }
         }
     }
