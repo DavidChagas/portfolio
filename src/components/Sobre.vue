@@ -45,8 +45,10 @@
             }
         },
         methods: {
-            calculaIdade(){
-                this.idade = moment("19960921", "YYYYMMDD").fromNow().split(' ')[0];
+            calculaIdade() {
+                var dataNascimento = moment("19960921", "YYYYMMDD");
+                var hoje = moment();
+                this.idade = hoje.diff(dataNascimento, 'years');
             }
         },
         mounted() {
